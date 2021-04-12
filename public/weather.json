@@ -1,52 +1,25 @@
-{
-	"data": [
-		{
-			"LocalObservationDateTime": "2021-04-11T18:31:00+03:00",
-			"EpochTime": 1618155060,
-			"WeatherText": "Clouds and sun",
-			"WeatherIcon": 4,
-			"HasPrecipitation": false,
-			"PrecipitationType": null,
-			"IsDayTime": true,
-			"Temperature": {
-				"Metric": {
-					"Value": 16.9,
-					"Unit": "C",
-					"UnitType": 17
-				},
-				"Imperial": {
-					"Value": 62,
-					"Unit": "F",
-					"UnitType": 18
-				}
+[
+	{
+		"LocalObservationDateTime": "2021-04-11T18:31:00+03:00",
+		"EpochTime": 1618155060,
+		"WeatherText": "Clouds and sun",
+		"WeatherIcon": 4,
+		"HasPrecipitation": false,
+		"PrecipitationType": null,
+		"IsDayTime": true,
+		"Temperature": {
+			"Metric": {
+				"Value": 16.9,
+				"Unit": "C",
+				"UnitType": 17
 			},
-			"MobileLink": "http://m.accuweather.com/en/il/tel-aviv/215854/current-weather/215854?lang=en-us",
-			"Link": "http://www.accuweather.com/en/il/tel-aviv/215854/current-weather/215854?lang=en-us"
-		}
-	],
-	"status": 200,
-	"statusText": "OK",
-	"headers": {
-		"cache-control": "public",
-		"content-type": "application/json; charset=utf-8",
-		"expires": "Sun, 11 Apr 2021 15:53:43 GMT"
-	},
-	"config": {
-		"url": "http://dataservice.accuweather.com/currentconditions/v1/215854",
-		"method": "get",
-		"headers": {
-			"Accept": "application/json, text/plain, */*"
+			"Imperial": {
+				"Value": 62,
+				"Unit": "F",
+				"UnitType": 18
+			}
 		},
-		"params": {
-			"apikey": "4kfYq2zbJgLGJ9vyYa3FfuFLU7RdXL0b"
-		},
-		"transformRequest": [null],
-		"transformResponse": [null],
-		"timeout": 0,
-		"xsrfCookieName": "XSRF-TOKEN",
-		"xsrfHeaderName": "X-XSRF-TOKEN",
-		"maxContentLength": -1,
-		"maxBodyLength": -1
-	},
-	"request": {}
-}
+		"MobileLink": "http://m.accuweather.com/en/il/tel-aviv/215854/current-weather/215854?lang=en-us",
+		"Link": "http://www.accuweather.com/en/il/tel-aviv/215854/current-weather/215854?lang=en-us"
+	}
+]

@@ -8,22 +8,20 @@ import {weatherSelector} from '../../../store/weather/weather.selector'
 
 const WeatherContainer = () => {
 	const dispatch = useDispatch();
-	const weatherToday = useSelector(weatherSelector.getTodayWeather);
 	const city = useSelector(weatherSelector.getCity);
 	const country = useSelector(weatherSelector.getCountry);
 
-	console.log(weatherToday);
-	const {Temperature, WeatherText} = useSelector(weatherSelector.getTodayWeather);
+	const {tempC, weatherText} = useSelector(weatherSelector.getTodayWeather);
 
 
 	return (
 		<div className="weather-container">
 			<div className="weather-container__top">
-				<Today city={city} country={country} deg={Temperature.Metric.Value} />
+				<Today city={city} country={country} deg={tempC} />
 				<FavoriteIcon className="favorite-icon" />
 			</div>
 			<div className="weather-container__condition">
-				{WeatherText}
+				{weatherText}
 			</div>
 			<CardsContainer />
 		</div>

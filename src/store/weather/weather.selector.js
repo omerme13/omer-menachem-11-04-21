@@ -7,9 +7,15 @@ export class WeatherSelector {
 
     // )
 
-    getTodayWeather = state => state.weather.data.data.data[0];
+    getTodayWeather = state => {
+        const {tempC, weatherText} = state.weather;
+
+        return {tempC, weatherText};
+    }
+    
     getCity = state => state.weather.city;
     getCountry = state => state.weather.country;
+    getDailyForecast = state => state.weather.dailyForecasts;
 
 }
 

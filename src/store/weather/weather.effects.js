@@ -21,10 +21,20 @@ export class WeatherEffects {
         )
     }
 
+    onGetWeather5Days(action$) {
+        return action$.pipe(
+            ofType(WeatherActionTypes.GET_WEATHER_5_DAYS_REQ),
+            pluck('payload'),
+            mergeMap((locationKey) => weatherService.getWeather5Days(locationKey)),
+            map(res => weatherActions.getWeather5DaysRes(res))
+        )
+    }
+
   
 
     allEffects = [
         this.onGetWeather.bind(this),
+        this.onGetWeather5Days.bind(this),
     ]
 }
 

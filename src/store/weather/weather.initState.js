@@ -1,11 +1,10 @@
 export const weatherInitialState = {
-    temp: 50,
-    data: {
-        data: {
-            data: [{Temperature: {Metric: ''}, WeatherText: ''}]
-        }
-    },
-    locationKey: '215854', // Tel Aviv,
+    tempC: '',
+    tempF: '',
+    weatherIcon: '',
+    weatherText: '',
     city: 'Tel Aviv',
-    country: "Israel"
+    country: 'Israel',
+    locationKey: '215854', // Tel Aviv,
+    dailyForecasts: []
 };

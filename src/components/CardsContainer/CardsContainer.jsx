@@ -6,24 +6,16 @@ import { weatherSelector } from "../../store/weather/weather.selector";
 import "./CardsContainer.scss";
 
 const CardsContainer = () => {
-	const dispatch = useDispatch();
-	// const users = useSelector(weatherSelector.getUsersSelector);
+	const dailyForecast = useSelector(weatherSelector.getDailyForecast);
 
-	const users = [
-		{id: 1, name: 'omer', email: 'email@gmail.com'},
-		{id: 1, name: 'omer', email: 'email@gmail.com'},
-		{id: 1, name: 'omer', email: 'email@gmail.com'},
-		{id: 1, name: 'omer', email: 'email@gmail.com'},
-		{id: 1, name: 'omer', email: 'email@gmail.com'},
-	]
 	const handleClick = () => {};
 
 	return (
 		<div className="cards-container" onClick={handleClick}>
-			{users.map((user) => (
-				<Card key={`user-${user.id}`}>
-                    <CardHeader title={user.name} />
-					<CardContent>{user.email}</CardContent>
+			{dailyForecast.map((forecast, i) => (
+				<Card key={`forecast-${i}`}>
+                    <CardHeader title={forecast.tempC.min} />
+					<CardContent>{forecast.tempC.max}</CardContent>
 				</Card>
 			))}
 		</div>

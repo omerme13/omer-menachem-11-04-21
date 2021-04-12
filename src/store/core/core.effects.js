@@ -16,7 +16,8 @@ export class CoreEffects {
         return action$.pipe(
             ofType(CoreActionTypes.INIT_APP),
             mergeMap(() => [
-                weatherActions.getWeatherReq()
+                weatherActions.getWeatherReq('215854'),
+                weatherActions.getWeather5DaysReq('215854'),
             ]),
         )
     }
