@@ -1,0 +1,35 @@
+.weather-container {
+    box-shadow: 0 1rem 2rem rgba(black, 0.15);
+    width: 85%;
+    height: 75vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--color-primary-lightest);
+
+    .MuiSvgIcon-root {
+        width: 4rem;
+        height: 4rem;
+        margin: 1rem;
+        fill: transparent;
+        stroke: #333;
+        cursor: pointer;
+        transition: 0.2s;
+
+        &:hover {
+            fill: rgb(204, 126, 126);
+            stroke: rgb(204, 126, 126);
+        } 
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__condition {
+        font-size: 7rem;
+        text-transform: capitalize;
+    }
+}

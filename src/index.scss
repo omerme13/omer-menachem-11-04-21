@@ -1,9 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
-
+  
 :root {
-	--main-bg-color: brown;
+	--color-primary-darkest: #976008;
+	--color-primary-darker: #b87409;
+	--color-primary-dark: #d8890b;
+	--color-primary: #f39c12;
+	--color-primary-light: #f5aa32;
+	--color-primary-lighter: #f6b753;
+	--color-primary-lightest: #f8c573;
 	--font-main: "Lato", sans-serif;
-	--font-color-main: #924500;
+	--font-color-main: #362203;
 }
 
 html {

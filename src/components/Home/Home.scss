@@ -1,14 +1,13 @@
 .home {
-    .MuiSvgIcon-root {
-        fill: transparent;
-        stroke: #333;
-        cursor: pointer;
-        transition: 0.2s;
 
-        &:hover {
-            fill: rgb(204, 126, 126);
-            stroke: rgb(204, 126, 126);
-        } 
+
+    .MuiFormControl-root {
+        width: 30%;
+        margin: 2rem auto;
+
+        input {
+            font-size: 1.5rem;
+        }
     }
 
 }

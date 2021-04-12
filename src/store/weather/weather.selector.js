@@ -7,6 +7,10 @@ export class WeatherSelector {
 
     // )
 
+    getTodayWeather = state => state.weather.data.data.data[0];
+    getCity = state => state.weather.city;
+    getCountry = state => state.weather.country;
+
 }
 
 
