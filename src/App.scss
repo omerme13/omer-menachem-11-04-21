@@ -1,0 +1,43 @@
+.app {
+    text-align: center;
+    width: 100%;
+    padding: 2rem;
+    background-color: #FFB878;
+    height: 100vh;
+    overflow-y: hidden;
+    
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__tab-nav {
+        display: flex;
+    }
+
+    &__tab-nav-item {
+        padding: 0.5rem 1rem;
+        border: 1px solid midnightblue;
+        cursor: pointer;
+        color: var(--font-color-main);
+        transition: 0.2s;
+
+        &:first-child {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-right: none;
+        }
+
+        &:last-child {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border-left: none;
+        }
+
+        &:hover, &--selected {
+            background-color: var(--font-color-main);
+            color: #FFB878;
+        }
+    }
+}

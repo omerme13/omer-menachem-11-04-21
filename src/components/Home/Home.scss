@@ -1,0 +1,14 @@
+.home {
+    .MuiSvgIcon-root {
+        fill: transparent;
+        stroke: #333;
+        cursor: pointer;
+        transition: 0.2s;
+
+        &:hover {
+            fill: rgb(204, 126, 126);
+            stroke: rgb(204, 126, 126);
+        } 
+    }
+
+}

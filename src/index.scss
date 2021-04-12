@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+:root {
+	--main-bg-color: brown;
+	--font-main: "Lato", sans-serif;
+	--font-color-main: #924500;
+}
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+
+	// @media only screen and (max-width: $bp-xxl) {
+	//     font-size: 50%;
+	// }
+
+	// @media only screen and (max-width: $bp-xl) {
+	//     font-size: 43.75%;
+	// }
+
+	// @media only screen and (max-width: $bp-l) {
+	//     font-size: 37.5%;
+	// }
+
+	// @media only screen and (max-width: $bp-m) {
+	//     font-size: 31.25%;
+	// }
+
+	// @media only screen and (max-width: $bp-s) {
+	//     font-size: 62.5%;
+	// }
+
+	// @media only screen and (max-width: $bp-xs) {
+	//     font-size: 37.5%;
+	// }
+}
+
+* {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: var(--font-main);
+	font-weight: 400;
+	color: var(--font-color-main);
+	font-size: 1.6rem;
+}

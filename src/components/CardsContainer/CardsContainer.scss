@@ -1,0 +1,16 @@
+.cards-container {
+    flex: 1;
+    display: flex;
+    height: 15rem;
+    margin: auto auto 0;
+    justify-content: space-between;
+
+    .MuiCard-root {
+        transition: opacity 2s, transform 0.2s, box-shadow 0.2s;
+
+        &:hover {
+            transform: translateY(-0.5rem) scale(1.02);
+            box-shadow: 0 2rem 2rem rgba(black, 0.2);
+        }
+    }
+}
