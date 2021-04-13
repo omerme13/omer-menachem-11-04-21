@@ -1,22 +1,22 @@
-import {createSelector} from 'reselect';
+import { createSelector } from 'reselect';
 
 export class WeatherSelector {
-    getTempSelector = (state) => state.weather.temp; 
-    getUsersSelector = (state) => state.weather.users; 
-    // getTempSelector = createSelector(
+    getFavorites = state => state.weather.favorites; 
+    getFavoritesAsArray = state => Object.values(state.weather.favorites).filter(val => val); 
 
-    // )
-
-    getTodayWeather = state => {
-        const {tempC, weatherText} = state.weather;
-
-        return {tempC, weatherText};
-    }
+    getTodayWeather = state => state.weather.today;
     
-    getCity = state => state.weather.city;
-    getCountry = state => state.weather.country;
+    getLocation = state => state.weather.location;
+
     getDailyForecast = state => state.weather.dailyForecasts;
 
+    getCities = state => state.weather.citiesFoundBySearch;
+
+    getIsFavorite = createSelector(
+        this.getLocation,
+        this.getFavorites,
+        (location, favorites) => !!favorites[location.key]
+    )
 }
 
 

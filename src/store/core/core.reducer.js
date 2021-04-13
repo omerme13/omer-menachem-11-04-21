@@ -5,11 +5,12 @@ export const coreReducerKey = 'core';
 
 export function CoreReducer(state = coreInitialState, action) {
     switch (action.type) {
-        case CoreActionTypes.GET_CORE_RES:
+        case CoreActionTypes.GO_TO_PAGE: {
             return {
                 ...state,
-                data: action.payload
+                page: action.payload
             }
+        }
 
         default: return state;
     }

@@ -1,12 +1,6 @@
-import {createSelector} from 'reselect';
 
 export class CoreSelector {
-    getTempSelector = (state) => state.core.temp; 
-    getUsersSelector = (state) => state.core.users; 
-    // getTempSelector = createSelector(
-
-    // )
-
+    getAppPage = state => state.core.page; 
 }
 
 

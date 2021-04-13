@@ -1,3 +1,5 @@
+@import '../../../variables.scss';
+
 .weather-container {
     box-shadow: 0 1rem 2rem rgba(black, 0.15);
     width: 85%;
@@ -9,7 +11,7 @@
     background-color: var(--color-primary-lightest);
     padding: 2rem;
 
-    .MuiSvgIcon-root {
+    .favorite-icon {
         width: 4rem;
         height: 4rem;
         // margin: 1rem;
@@ -18,7 +20,7 @@
         cursor: pointer;
         transition: 0.2s;
 
-        &:hover {
+        &:hover, &.favorite-icon--full {
             fill: rgb(204, 126, 126);
             stroke: rgb(204, 126, 126);
         } 
@@ -27,10 +29,44 @@
     &__top {
         display: flex;
         justify-content: space-between;
+
+        @media only screen and (max-width: $bp-s) {
+            align-items: center;
+        }
     }
 
     &__condition {
         font-size: 7rem;
         text-transform: capitalize;
     }
+
+    &__today {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__degrees {
+        font-size: 4rem;
+    }
+
+    &__location {
+        font-size: 3rem;
+        letter-spacing: 1px;
+    }
+
+    @media only screen and (max-width: $bp-m) {
+        width: 100%;
+	}
+
+    @media only screen and (max-width: $bp-s) {
+        background: transparent;
+        box-shadow: none;
+        gap: 4rem;
+        font-size: 3rem;
+        height: auto;
+        margin-bottom: 2rem;
+	}
 }

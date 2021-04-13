@@ -1,0 +1,28 @@
+@import '../../variables.scss';
+
+.favorites {
+    height: 90vh;
+    padding: 3rem;
+    
+    .cards-container {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: space-around;
+        
+        .MuiCard-root {
+            transition: opacity 2s, transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            height: 20rem;
+    
+            &:hover {
+                transform: translateY(-0.5rem) scale(1.02);
+                box-shadow: 0 2rem 2rem rgba(black, 0.2);
+            }
+    
+        }
+    }
+
+    @media only screen and (max-width: $bp-s) {
+        font-size: 2.5rem;
+	}
+}

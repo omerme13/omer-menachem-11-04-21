@@ -1,11 +1,16 @@
-.home {
+@import '../../variables.scss';
 
+.home {
     .MuiFormControl-root {
         width: 30%;
         margin: 2rem auto;
 
         input {
-            font-size: 1.5rem;
+            font-size: 2rem;
+        }
+
+        @media only screen and (max-width: $bp-s) {
+            width: 100%;
         }
     }
 

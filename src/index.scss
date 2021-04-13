@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
-  
+@import './variables.scss';
+
+
 :root {
 	--color-primary-darkest: #976008;
 	--color-primary-darker: #b87409;
@@ -10,35 +12,20 @@
 	--color-primary-lightest: #f8c573;
 	--font-main: "Lato", sans-serif;
 	--font-color-main: #362203;
+	--app-background: #fef4e4;
 }
 
 html {
 	font-size: 62.5%;
 	box-sizing: border-box;
 
-	// @media only screen and (max-width: $bp-xxl) {
-	//     font-size: 50%;
-	// }
+	@media only screen and (max-width: $bp-l) {
+	    font-size: 50%;
+	}
 
-	// @media only screen and (max-width: $bp-xl) {
-	//     font-size: 43.75%;
-	// }
-
-	// @media only screen and (max-width: $bp-l) {
-	//     font-size: 37.5%;
-	// }
-
-	// @media only screen and (max-width: $bp-m) {
-	//     font-size: 31.25%;
-	// }
-
-	// @media only screen and (max-width: $bp-s) {
-	//     font-size: 62.5%;
-	// }
-
-	// @media only screen and (max-width: $bp-xs) {
-	//     font-size: 37.5%;
-	// }
+	@media only screen and (max-width: $bp-s) {
+		// font-size: 43.75%;
+	}
 }
 
 * {
@@ -51,5 +38,7 @@ body {
 	font-family: var(--font-main);
 	font-weight: 400;
 	color: var(--font-color-main);
-	font-size: 1.6rem;
+	font-size: 1.8rem;
+    background-color: var(--app-background);
+
 }

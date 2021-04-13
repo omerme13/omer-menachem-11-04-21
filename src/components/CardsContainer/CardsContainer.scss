@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .cards-container {
     width: 100%;
     display: flex;
@@ -7,11 +9,24 @@
     .MuiCard-root {
         background-color: var(--color-primary-light);
         width: 15rem;
-        transition: opacity 2s, transform 0.2s, box-shadow 0.2s;
-
-        &:hover {
-            transform: translateY(-0.5rem) scale(1.02);
-            box-shadow: 0 2rem 2rem rgba(black, 0.2);
-        }
     }
+
+    .MuiCardHeader-title {
+        font-size: inherit;
+    }
+    
+    .card-weather-text {
+        color: var(--color-primary-darkest);
+    }
+
+    @media only screen and (max-width: $bp-s) {
+        height: auto;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+
+        .MuiCard-root {
+            width: 100%;
+        }
+	}
 }
