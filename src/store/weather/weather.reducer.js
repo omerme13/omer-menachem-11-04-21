@@ -49,7 +49,6 @@ export function WeatherReducer(state = weatherInitialState, action) {
 
 		case WeatherActionTypes.UPDATE_LOCATION: {
 			const {LocalizedName, Country, Key} = action.payload;
-			console.log(action.payload);
             return {
                 ...state,
 				location: {

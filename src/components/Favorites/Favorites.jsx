@@ -10,7 +10,6 @@ const Favorites = () => {
 	const favorites = useSelector(weatherSelector.getFavoritesAsArray);
 
     const handleClick = (forecast) => {
-		console.log(forecast);
 		dispatch(coreActions.selectedFavorite(forecast));
     };
 
