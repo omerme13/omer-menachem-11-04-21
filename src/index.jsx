@@ -1,15 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
-import "./index.scss";
+import { BrowserRouter } from "react-router-dom";
 import App from "./App";
+import "./index.scss";
 import reportWebVitals from "./reportWebVitals";
-import { epicMiddleware, store } from "./store/store";
-import { rootEffects } from "./store/root/root.effects";
-import { weatherEffects } from "./store/weather/weather.effects";
-import { weatherActions } from "./store/weather/weather.actions";
 import { coreActions } from "./store/core/core.actions";
+import { rootEffects } from "./store/root/root.effects";
+import { epicMiddleware, store } from "./store/store";
 
 ReactDOM.render(
 	<React.StrictMode>
