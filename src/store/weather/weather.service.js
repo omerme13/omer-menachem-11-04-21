@@ -4,8 +4,7 @@ export class WeatherService {
 	constructor() {}
 
 	getWeather = locationKey => {
-        // const url = `http://dataservice.accuweather.com/currentconditions/v1/${locationKey}`;
-        const url = '/weather.json';
+        const url = `http://dataservice.accuweather.com/currentconditions/v1/${locationKey}`;
 
 		return Axios.get(url, {
 			params: {
@@ -18,8 +17,7 @@ export class WeatherService {
 	};
 
 	getWeather5Days = locationKey => {
-        // const url = `http://dataservice.accuweather.com/forecasts/v1/daily/5day/${locationKey}`;
-        const url = '/weather5Days.json';
+        const url = `http://dataservice.accuweather.com/forecasts/v1/daily/5day/${locationKey}`;
 
 		return Axios.get(url, {
 			params: {
@@ -32,8 +30,7 @@ export class WeatherService {
 	};
 
 	getWeatherLocations = q => {
-		// const url = 'http://dataservice.accuweather.com/locations/v1/cities/autocomplete';
-        const url = '/weatherLocations.json';
+		const url = 'http://dataservice.accuweather.com/locations/v1/cities/autocomplete';
 
 		return Axios.get(url, {
 			params: {
