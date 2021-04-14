@@ -28,11 +28,15 @@ export class WeatherEffects {
         )
     }
 
-    onGetWeather5Days(action$) {
+    onGetWeather5Days(action$, state) {
         return action$.pipe(
             ofType(WeatherActionTypes.GET_WEATHER_5_DAYS_REQ),
             pluck('payload'),
-            mergeMap(locationKey => weatherService.getWeather5Days(locationKey)),
+            withLatestFrom(state),
+            mergeMap(([locationKey, state]) => {
+                const {key} = this.weatherSelector.getLocation(state);
+                return weatherService.getWeather5Days(locationKey || key);
+            }),
             catchError(err => console.log(err)),
             map(res => this.weatherActions.getWeather5DaysRes(res))
         )
