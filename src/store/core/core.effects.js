@@ -20,28 +20,10 @@ export class CoreEffects {
 		);
 	}
 
-	onSelectedFavorite(action$) {
-		return action$.pipe(
-			ofType(CoreActionTypes.ON_SELECTED_FAVORITE),
-			pluck("payload"),
-			mergeMap((forecast) => [
-				weatherActions.getWeatherReq(forecast.key),
-				weatherActions.getWeather5DaysReq(forecast.key),
-				weatherActions.updateLocation({
-					LocalizedName: forecast.city,
-					Country: {
-                        LocalizedName: forecast.country
-                    },
-					Key: forecast.key
-				}),
-                this.coreActions.goToPage('Home')
-			])
-		);
-	}
+
 
 	allEffects = [
         this.onInitApp.bind(this),
-        this.onSelectedFavorite.bind(this),
     ];
 }
 

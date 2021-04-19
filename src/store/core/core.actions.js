@@ -9,9 +9,18 @@ export class CoreActions {
         return ({type: CoreActionTypes.GO_TO_PAGE, payload});
     }
 
-    selectedFavorite(payload) {
-        return ({type: CoreActionTypes.ON_SELECTED_FAVORITE, payload});
+    toggleToast(payload) {
+        return ({type: CoreActionTypes.TOGGLE_TOAST, payload});
     }
+
+    switchTheme() {
+        return ({type: CoreActionTypes.SWITCH_THEME});
+    }
+
+    changeTempUnit() {
+        return ({type: CoreActionTypes.CHANGE_TEMP_UNIT});
+    }
+
 }
 
 export const coreActions = new CoreActions();

@@ -8,13 +8,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: var(--color-primary-lightest);
+    background-color: var(--color-primary-lighter);
     padding: 2rem;
 
     .favorite-icon {
-        width: 4rem;
-        height: 4rem;
-        // margin: 1rem;
+        font-size: 4rem;
         fill: transparent;
         stroke: #333;
         cursor: pointer;

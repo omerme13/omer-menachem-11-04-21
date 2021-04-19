@@ -1,16 +1,19 @@
 import React from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { Card, CardContent, CardHeader } from '@material-ui/core';
-import { coreActions } from "../../store/core/core.actions";
 import { weatherSelector } from '../../store/weather/weather.selector';
 import './Favorites.scss';
+import { coreSelector } from "../../store/core/core.selector";
+import {weatherActions} from '../../store/weather/weather.actions'
 
 const Favorites = () => {
 	const dispatch = useDispatch();
 	const favorites = useSelector(weatherSelector.getFavoritesAsArray);
+	const {tempUnit} = useSelector(coreSelector.getUserPreference);
+
 
     const handleClick = (forecast) => {
-		dispatch(coreActions.selectedFavorite(forecast));
+		dispatch(weatherActions.selectFavorite(forecast));
     };
 
 	return (
@@ -23,7 +26,10 @@ const Favorites = () => {
 						/>
 						<CardContent>
 							<strong>
-								{forecast.tempC}{forecast.tempC && '°'}
+								{tempUnit === 'c'
+									? `${forecast.tempC}°C`
+									: `${forecast.tempF}°F`
+							}
 							</strong>
 							<br />
 							<br />

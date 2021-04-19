@@ -37,6 +37,10 @@ export class WeatherActions {
     addRemoveFavorite(payload) {
         return ({type: WeatherActionTypes.ADD_REMOVE_FAVORITE, payload});
     }
+
+    selectFavorite(payload) {
+        return ({type: WeatherActionTypes.SELECT_FAVORITE, payload});
+    }
 }
 
 export const weatherActions = new WeatherActions();

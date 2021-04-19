@@ -1,0 +1,14 @@
+.toast {
+    .MuiAlert-root {
+
+        .MuiAlert-message {
+            font-family: var(--font-main);
+            font-size: inherit;
+        }
+
+        .MuiAlert-message,
+        .MuiAlert-action svg {
+            font-size: 1.5rem;
+        }
+    }
+}

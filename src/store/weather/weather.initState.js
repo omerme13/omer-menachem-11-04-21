@@ -5,10 +5,10 @@ export const weatherInitialState = {
 		key: "215854", // Tel Aviv,
 	},
 	today: {
-		tempC: "",
-		tempF: "",
+		tempC: "22",
+		tempF: "72",
 		weatherIcon: "",
-		weatherText: "",
+		weatherText: "Cloudy",
 	},
 	dailyForecasts: [],
 	favorites: {
@@ -17,7 +17,7 @@ export const weatherInitialState = {
 			country: "Israel",
 			key: "215854",
 			tempC: "22",
-			tempF: "",
+			tempF: "72",
 			weatherText: "Cloudy",
 		}
 	},

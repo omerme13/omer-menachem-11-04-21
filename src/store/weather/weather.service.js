@@ -1,45 +1,26 @@
-import Axios from "axios";
+import { axiosReq } from "../AxiosReq";
 
 export class WeatherService {
-	getWeather = locationKey => {
-        const url = `http://dataservice.accuweather.com/currentconditions/v1/${locationKey}`;
+	getWeather = locationKey => (
+		axiosReq.get(
+			`http://dataservice.accuweather.com/currentconditions/v1/${locationKey}`,
+			{ apikey: process.env.REACT_APP_API_KEY }
+		)
+	)
 
-		return Axios.get(url, {
-			params: {
-				apikey: "4kfYq2zbJgLGJ9vyYa3FfuFLU7RdXL0b"
-			},
-		})
-		.catch(err => {
-			throw(err)
-		})
-	};
+	getWeather5Days = locationKey => (
+		axiosReq.get(
+			`http://dataservice.accuweather.com/forecasts/v1/daily/5day/${locationKey}`,
+			{ apikey: process.env.REACT_APP_API_KEY }
+		)
+	);
 
-	getWeather5Days = locationKey => {
-        const url = `http://dataservice.accuweather.com/forecasts/v1/daily/5day/${locationKey}`;
-
-		return Axios.get(url, {
-			params: {
-				apikey: "4kfYq2zbJgLGJ9vyYa3FfuFLU7RdXL0b"
-			},
-		})
-		.catch(err => {
-			throw(err)
-		})
-	};
-
-	getWeatherLocations = q => {
-		const url = 'http://dataservice.accuweather.com/locations/v1/cities/autocomplete';
-
-		return Axios.get(url, {
-			params: {
-				apikey: "4kfYq2zbJgLGJ9vyYa3FfuFLU7RdXL0b",
-				q
-			},
-		})
-		.catch(err => {
-			throw(err)
-		})
-	};
+	getWeatherLocations = q => (
+		axiosReq.get(
+			'http://dataservice.accuweather.com/locations/v1/cities/autocomplete',
+			{ apikey: process.env.REACT_APP_API_KEY,q }
+		)
+	)
 }
 
 export const weatherService = new WeatherService();

@@ -2,7 +2,11 @@ import { createSelector } from 'reselect';
 
 export class WeatherSelector {
     getFavorites = state => state.weather.favorites; 
-    getFavoritesAsArray = state => Object.values(state.weather.favorites).filter(val => val); 
+    
+    getFavoritesAsArray = createSelector(
+        this.getFavorites,
+        favorites => Object.values(favorites).filter(val => val)
+    ) 
 
     getTodayWeather = state => state.weather.today;
     

@@ -8,6 +8,7 @@
 
     .MuiCard-root {
         background-color: var(--color-primary-light);
+        color: var(--font-color-main);
         width: 15rem;
     }
 
@@ -16,7 +17,7 @@
     }
     
     .card-weather-text {
-        color: var(--color-primary-darkest);
+        color: var(--color-primary-dark);
     }
 
     @media only screen and (max-width: $bp-s) {

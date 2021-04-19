@@ -1,6 +1,8 @@
 
 export class CoreSelector {
-    getAppPage = state => state.core.page; 
+    getAppPage = state => state.core.page;
+    getToastData = state => state.core.toast;
+    getUserPreference = state => state.core.preference;
 }
 
 

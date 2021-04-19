@@ -60,13 +60,13 @@ export function WeatherReducer(state = weatherInitialState, action) {
 		}
 			
 		case WeatherActionTypes.ADD_REMOVE_FAVORITE: {
-			const {key} = action.payload;
+			const {isAddToFavorites, key} = action.payload;
 			
 			return {
 				...state,
 				favorites: {
 					...state.favorites,
-					[key]: state.favorites[key] ? undefined : action.payload
+					[key]: isAddToFavorites ? action.payload : undefined 
 				}
 			}
 		}

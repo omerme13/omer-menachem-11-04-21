@@ -7,6 +7,12 @@
     height: 100vh;
     overflow-y: hidden;
 
+    color: var(--font-color-main);
+	font-size: 1.8rem;
+    background-color: var(--app-background);
+	font-family: var(--font-main);
+	font-weight: 400;
+    
     @media only screen and (max-width: $bp-s) {
         overflow-y: auto;
 	}
@@ -53,6 +59,36 @@
         &:hover, &--selected {
             background-color: var(--color-primary);
             color: var(--font-color-main);
+        }
+    }
+
+    &__preference {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        font-size: 3rem;
+
+        & > * {
+            cursor: pointer;
+            transition: 0.2s;
+        }
+    }
+
+    &__degree-unit {
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    &__theme {
+        height: 3rem;
+
+        &:hover {
+            transform: scale(1.15) rotate(30deg);
+        }
+
+        svg {
+            font-size: 3rem;
         }
     }
 }
