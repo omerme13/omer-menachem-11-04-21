@@ -1,5 +1,5 @@
 import { ofType } from "redux-observable";
-import { mergeMap, pluck } from "rxjs/operators";
+import { mergeMap } from "rxjs/operators";
 import { weatherActions } from "../weather/weather.actions";
 import { coreActions } from "./core.actions";
 import { CoreActionTypes } from "./core.actionTypes";
